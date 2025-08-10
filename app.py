@@ -15,7 +15,7 @@ def run_playwright_job(prompt: str, query: str, timeout_s: int = 60):
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(
-                headless=True,
+                headless=False,
                 args=[
                     "--disable-blink-features=AutomationControlled",
                     "--disable-dev-shm-usage",
